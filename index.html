@@ -348,6 +348,27 @@
             line-height: 1.65;
         }
 
+        .timeline-projects {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .timeline-projects li {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            padding: 3px 0 3px 16px;
+            position: relative;
+            line-height: 1.55;
+        }
+
+        .timeline-projects li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         .timeline-tag {
             display: inline-block;
             font-size: 0.78rem;
@@ -426,6 +447,19 @@
             font-size: 0.84rem;
             color: var(--text-muted);
             font-style: italic;
+        }
+
+        .pub-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            padding: 1px 8px;
+            background: var(--accent-bg);
+            color: var(--accent);
+            border-radius: 10px;
+            font-weight: 600;
+            font-style: normal;
+            margin-left: 6px;
+            vertical-align: middle;
         }
 
         .pub-doi {
@@ -522,6 +556,13 @@
             font-weight: 700;
         }
 
+        .misc-list li .ml-date {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-right: 6px;
+        }
+
         .conf-item {
             display: flex;
             gap: 16px;
@@ -582,6 +623,12 @@
             font-size: 1.1rem;
             margin-top: 2px;
             flex-shrink: 0;
+        }
+
+        .subsection-heading {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--text);
         }
 
         /* =================== MOBILE HAMBURGER =================== */
@@ -793,8 +840,8 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Sep 2022 – Aug 2025</div>
                     <div class="timeline-title">NOVA IMS</div>
-                    <div class="timeline-subtitle">PhD Candidate & Teaching Assistant, Lisbon</div>
-                    <div class="timeline-desc">Taught, evaluated and prepared material for courses in the Bachelors in Information Management, Information Systems and Data Science, including Computation III, Optimization Algorithms, and Computational Methods for Optimization.</div>
+                    <div class="timeline-subtitle">PhD Candidate, Lisbon</div>
+                    <div class="timeline-desc">Pursued doctoral research in Evolutionary Computation, developing new techniques to address bloating in Geometric Semantic Genetic Programming, which led to the SLIM algorithm.</div>
                     <span class="timeline-tag">PhD Research Scholarship</span>
                 </div>
                 <div class="timeline-item">
@@ -822,18 +869,6 @@
         <div class="section" id="education">
             <h2 class="section-title">Education</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2025 – Jun 2025</div>
-                    <div class="timeline-title">Visiting Student — Evolutionary Robotics and Artificial Life Lab</div>
-                    <div class="timeline-subtitle">Università degli Studi di Trieste, Trieste</div>
-                    <div class="timeline-desc">ROAR-NET Short Term Scientific Mission focused on the development of new Private Synthetic Data Generation techniques through Evolutionary Algorithms.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Jan 2025 – Apr 2025</div>
-                    <div class="timeline-title">Visiting Student — Computational Systems Biology Lab</div>
-                    <div class="timeline-subtitle">Università Milano Bicocca, Milan</div>
-                    <div class="timeline-desc">Applied Machine Learning and Evolutionary Algorithms to Genomic Data to advance prevention and treatment of neuro-muscular diseases.</div>
-                </div>
                 <div class="timeline-item">
                     <div class="timeline-date">Sep 2022 – Aug 2025</div>
                     <div class="timeline-title">Ph.D. in Data Science</div>
@@ -866,6 +901,13 @@
             <h2 class="section-title">Publications</h2>
 
             <h3 class="pub-category">Journal Articles</h3>
+
+            <div class="pub-item">
+                <div class="pub-title">SLIM: The non-bloating genetic programming with geometric semantic mutations and meaningful semantic crossover</div>
+                <div class="pub-authors">L. Vanneschi, S. Pereira, and <span class="me">D. Farinati</span></div>
+                <div class="pub-venue">Genetic Programming and Evolvable Machines, vol. 27, no. 1, p. 9, Mar. 2026</div>
+                <a href="https://doi.org/10.1007/s10710-026-09535-y" class="pub-doi" target="_blank">doi: 10.1007/s10710-026-09535-y</a>
+            </div>
 
             <div class="pub-item">
                 <div class="pub-title">A study on the dynamics and effectiveness of the deflate geometric semantic mutation</div>
@@ -912,7 +954,7 @@
             <h3 class="pub-category">Conference Proceedings</h3>
 
             <div class="pub-item">
-                <div class="pub-title">Nevo-gspt: Population-based neural network evolution using inflate and deflate operators</div>
+                <div class="pub-title">NEVO-GSPT: Population-based neural network evolution using inflate and deflate operators</div>
                 <div class="pub-authors"><span class="me">D. Farinati</span>, F. J. J. B. Santos, L. Vanneschi, and M. Castelli</div>
                 <div class="pub-venue">EuroGP, Toulouse, France, Apr. 2026</div>
                 <a href="https://arxiv.org/abs/2601.08657" class="pub-doi" target="_blank">arXiv: 2601.08657</a>
@@ -926,9 +968,28 @@
             </div>
 
             <div class="pub-item">
+                <div class="pub-title">Developing a novel comorbidities index for predicting 10-year mortality in prostate cancer patients: A computational data-driven approach</div>
+                <div class="pub-authors"><span class="me">D. Farinati</span> et al.</div>
+                <div class="pub-venue">Parallel Problem Solving from Nature – PPSN XIX, LNCS, Trento, Italy, Springer Nature, Aug. 2026 <span class="pub-badge">Forthcoming</span></div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">A0751 Validation of the Cambridge, EAU, and STARCAP prognostic score in predicting biochemical recurrence in contemporary prostate cancer patients treated with radical prostatectomy</div>
+                <div class="pub-authors">S. Scuderi et al.</div>
+                <div class="pub-venue">European Urology, vol. 89, Elsevier BV, 2026, pp. S1–S2</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Revisiting SLIM: Improved learning dynamics and model compactness in symbolic regression</div>
+                <div class="pub-authors">G. Silva et al.</div>
+                <div class="pub-venue">Genetic Programming (EuroGP 2026), LNCS vol. 16521, Cham: Springer, Apr. 2026, pp. 156–172</div>
+                <a href="https://doi.org/10.1007/978-3-032-23005-8_10" class="pub-doi" target="_blank">doi: 10.1007/978-3-032-23005-8_10</a>
+            </div>
+
+            <div class="pub-item">
                 <div class="pub-title">Exploring the impact of data scale on mutation step size in SLIM-GSGP</div>
                 <div class="pub-authors"><span class="me">D. Farinati</span>, G. Pietropolli, and L. Vanneschi</div>
-                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste</div>
+                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste <span class="pub-badge">Forthcoming</span></div>
             </div>
 
             <div class="pub-item">
@@ -941,7 +1002,7 @@
             <div class="pub-item">
                 <div class="pub-title">Introducing crossover in SLIM-GSGP</div>
                 <div class="pub-authors">G. Pietropolli, <span class="me">D. Farinati</span>, L. Manzoni, M. Castelli, and L. Vanneschi</div>
-                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste</div>
+                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste <span class="pub-badge">Forthcoming</span></div>
             </div>
 
             <div class="pub-item">
@@ -954,7 +1015,7 @@
             <div class="pub-item">
                 <div class="pub-title">Exploring the integration of cellular structures in genetic programming-based methods</div>
                 <div class="pub-authors">L. Rovito et al.</div>
-                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste</div>
+                <div class="pub-venue">European Conference on Genetic Programming, EuroGP 2025, Trieste <span class="pub-badge">Forthcoming</span></div>
             </div>
 
             <div class="pub-item">
@@ -967,7 +1028,7 @@
             <div class="pub-item">
                 <div class="pub-title">GM4OS: An evolutionary oversampling approach for imbalanced binary classification tasks</div>
                 <div class="pub-authors"><span class="me">D. Farinati</span> and L. Vanneschi</div>
-                <div class="pub-venue">Applications of Evolutionary Computation, Springer, 2024</div>
+                <div class="pub-venue">Applications of Evolutionary Computation, Springer, 2024, pp. 68–82</div>
                 <a href="https://doi.org/10.1007/978-3-031-56852-7_5" class="pub-doi" target="_blank">doi: 10.1007/978-3-031-56852-7_5</a>
             </div>
         </div>
@@ -980,7 +1041,7 @@
                 <div class="skills-group-title">Languages</div>
                 <div class="skill-tags">
                     <span class="skill-tag">🇮🇹 Italian (native)</span>
-                    <span class="skill-tag">🇬🇧 English (C1 IELTS)</span>
+                    <span class="skill-tag">🇬🇧 English (proficient, C1 IELTS)</span>
                     <span class="skill-tag">🇵🇹 Portuguese (advanced)</span>
                     <span class="skill-tag">🇪🇸 Spanish (basic)</span>
                 </div>
@@ -1020,6 +1081,7 @@
                     <span class="skill-tag">Academic Research</span>
                     <span class="skill-tag">Paper Structuring</span>
                     <span class="skill-tag">Experimental Design</span>
+                    <span class="skill-tag">Flexibility</span>
                     <span class="skill-tag">Teamwork</span>
                     <span class="skill-tag">Information Management</span>
                 </div>
@@ -1037,21 +1099,51 @@
                         <li>IEEE Trans. on Evolutionary Computation</li>
                         <li>Int. Journal of Data Science and Analytics</li>
                         <li>Scientific Reports</li>
+                        <li>Parallel Problem Solving from Nature (PPSN)</li>
+                    </ul>
+                </div>
+                <div class="misc-card">
+                    <h4>Teaching</h4>
+                    <ul class="misc-list">
+                        <li><span class="ml-date">2026</span>Università Vita e Salute San Raffaele — Surgery in the Third Millennium: The Role of Robotics and Artificial Intelligence</li>
+                        <li><span class="ml-date">2022–2024</span>Universidade NOVA de Lisboa — Computation III, Optimization Algorithms and Computational Methods for Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="misc-grid">
+                <div class="misc-card">
+                    <h4>Visiting Periods</h4>
+                    <ul class="misc-list">
+                        <li><span class="ml-date">06/2026</span>King's College London — Dept. of Surgical & Interventional Engineering (Supervisor: Prof. Alejandro Granados)</li>
+                        <li><span class="ml-date">04–06/2025</span>Università degli Studi di Trieste — Dipartimento di Ingegneria e Architettura (Supervisor: Prof. Eric Medvet, ROAR-NET Scholarship)</li>
+                        <li><span class="ml-date">01–04/2025</span>Università Milano Bicocca — Dipartimento di Informatica, Sistemi e Comunicazione (Supervisor: Prof. Daniela Besozzi, Erasmus Trainership Scholarship)</li>
                     </ul>
                 </div>
                 <div class="misc-card">
                     <h4>Thesis Mentoring</h4>
                     <ul class="misc-list">
-                        <li>Sofia Pereira (MSc, NOVA IMS, 2025)</li>
-                        <li>Beatriz Xavier (MSc, NOVA IMS, 2025)</li>
-                        <li>Lena De Waele (MSc, NOVA FCT, 2024)</li>
-                        <li>Ana Silva (MSc, NOVA FCT, 2023)</li>
-                        <li>Antonio Ladeira (MSc, NOVA IMS, 2023)</li>
+                        <li><span class="ml-date">2027</span>Lucrezia Bonavia (Medicine, Università Vita e Salute San Raffaele)</li>
+                        <li><span class="ml-date">2026</span>Vittoria Maestroni (Medicine, Università Vita e Salute San Raffaele)</li>
+                        <li><span class="ml-date">2026</span>Daniele Sarnino (Medicine, Università Vita e Salute San Raffaele)</li>
+                        <li><span class="ml-date">2025</span>Sofia Pereira (MSc, NOVA IMS)</li>
+                        <li><span class="ml-date">2025</span>Beatriz Xavier (MSc, NOVA IMS)</li>
+                        <li><span class="ml-date">2024</span>Lena De Waele (MSc, NOVA FCT)</li>
+                        <li><span class="ml-date">2023</span>Ana Silva (MSc, NOVA FCT)</li>
+                        <li><span class="ml-date">2023</span>Antonio Ladeira (MSc, NOVA IMS)</li>
                     </ul>
                 </div>
             </div>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin: 8px 0 16px; color: var(--text);">Conferences</h3>
+            <h3 class="subsection-heading" style="margin: 8px 0 16px;">Schools</h3>
+            <div class="conf-item">
+                <div class="conf-date">06/2023</div>
+                <div class="conf-details">
+                    <strong>EUTOPIA Summer School</strong>, Participant, Lisbon
+                </div>
+            </div>
+
+            <h3 class="subsection-heading" style="margin: 32px 0 16px;">Conferences</h3>
 
             <div class="conf-item">
                 <div class="conf-date">07/2025</div>
@@ -1080,14 +1172,8 @@
                     <strong>GECCO 2023</strong>, Volunteer, Lisbon
                 </div>
             </div>
-            <div class="conf-item">
-                <div class="conf-date">06/2023</div>
-                <div class="conf-details">
-                    <strong>EUTOPIA Summer School</strong>, Participant, Lisbon
-                </div>
-            </div>
 
-            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin: 32px 0 16px; color: var(--text);">Beyond Research</h3>
+            <h3 class="subsection-heading" style="margin: 32px 0 16px;">Beyond Research</h3>
             <div class="fun-facts">
                 <div class="fun-fact">
                     <i class="fas fa-mountain"></i>
